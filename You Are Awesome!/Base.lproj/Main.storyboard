@@ -16,29 +16,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mez-1G-7P2">
-                                <rect key="frame" x="16" y="20" width="343" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KDv-oC-LJt">
+                                <rect key="frame" x="16" y="120" width="326" height="350"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder Text!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mez-1G-7P2">
+                                <rect key="frame" x="16" y="20" width="328" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Cpr-Zs-jS2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
                                 <color key="textColor" red="0.4968709946" green="0.1185852811" blue="0.086245574059999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rL-98-93q">
-                                <rect key="frame" x="117" y="128" width="140" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rL-98-93q">
+                                <rect key="frame" x="108" y="78" width="144" height="34"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Show Message"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Show Message">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="messageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CIF-1J-c2R"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KDv-oC-LJt">
-                                <rect key="frame" x="16" y="167" width="343" height="480"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4rL-98-93q" secondAttribute="trailing" constant="108" id="1Gk-Tt-5CV"/>
+                            <constraint firstItem="mez-1G-7P2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="67M-44-tZV"/>
+                            <constraint firstItem="mez-1G-7P2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="CxT-Vl-aKX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KDv-oC-LJt" secondAttribute="trailing" constant="18" id="HSp-n7-zZZ"/>
+                            <constraint firstItem="KDv-oC-LJt" firstAttribute="top" secondItem="4rL-98-93q" secondAttribute="bottom" constant="8" id="KD5-DA-Ymi"/>
+                            <constraint firstItem="4rL-98-93q" firstAttribute="top" secondItem="mez-1G-7P2" secondAttribute="bottom" constant="8" id="RZ8-d7-MOz"/>
+                            <constraint firstItem="KDv-oC-LJt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="TKx-LQ-Hkp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mez-1G-7P2" secondAttribute="trailing" constant="16" id="hh7-qg-ZoO"/>
+                            <constraint firstAttribute="bottom" secondItem="KDv-oC-LJt" secondAttribute="bottom" constant="20" id="vrf-W1-pcJ"/>
+                            <constraint firstItem="4rL-98-93q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="108" id="yGD-AC-HzT"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="KDv-oC-LJt" id="ytW-c6-T1b"/>
@@ -47,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="44" y="70.614692653673174"/>
+            <point key="canvasLocation" x="42.399999999999999" y="69.715142428785612"/>
         </scene>
     </scenes>
     <resources>
