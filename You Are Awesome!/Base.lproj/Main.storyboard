@@ -28,36 +28,53 @@
                                 <color key="textColor" red="0.4968709946" green="0.1185852811" blue="0.086245574059999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rL-98-93q">
-                                <rect key="frame" x="90" y="51" width="140" height="34"/>
-                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Show Message">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="messageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CIF-1J-c2R"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="I9J-Zw-09A">
+                                <rect key="frame" x="17.5" y="81" width="285.5" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play Sound" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqa-4h-Nou">
+                                        <rect key="frame" x="0.0" y="0.0" width="85" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="soK-hB-enX">
+                                        <rect key="frame" x="94" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="playSoundToggled:" destination="BYZ-38-t0r" eventType="valueChanged" id="aPj-4B-c6m"/>
+                                        </connections>
+                                    </switch>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rL-98-93q">
+                                        <rect key="frame" x="152" y="0.0" width="133.5" height="31"/>
+                                        <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Show Message">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="messageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CIF-1J-c2R"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="mez-1G-7P2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="67M-44-tZV"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4rL-98-93q" secondAttribute="trailing" constant="90" id="AXd-BF-3ra"/>
                             <constraint firstItem="mez-1G-7P2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="CxT-Vl-aKX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KDv-oC-LJt" secondAttribute="trailing" constant="18" id="ENc-n0-ghm"/>
                             <constraint firstItem="KDv-oC-LJt" firstAttribute="top" secondItem="mez-1G-7P2" secondAttribute="bottom" constant="50" id="R1N-Ha-MW0"/>
-                            <constraint firstItem="4rL-98-93q" firstAttribute="top" secondItem="mez-1G-7P2" secondAttribute="bottom" constant="8" id="RZ8-d7-MOz"/>
+                            <constraint firstItem="I9J-Zw-09A" firstAttribute="top" secondItem="mez-1G-7P2" secondAttribute="bottom" constant="11" id="SIj-jJ-tJg"/>
                             <constraint firstItem="KDv-oC-LJt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="TKx-LQ-Hkp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mez-1G-7P2" secondAttribute="trailing" constant="16" id="hh7-qg-ZoO"/>
-                            <constraint firstItem="4rL-98-93q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="shH-h1-lCn"/>
+                            <constraint firstItem="I9J-Zw-09A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nix-PE-25s"/>
                             <constraint firstAttribute="bottom" secondItem="KDv-oC-LJt" secondAttribute="bottom" constant="20" id="vrf-W1-pcJ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="KDv-oC-LJt" id="ytW-c6-T1b"/>
                         <outlet property="messageLabel" destination="mez-1G-7P2" id="ssj-XF-I7a"/>
+                        <outlet property="playSoundSwitch" destination="soK-hB-enX" id="Q6C-j0-6U7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
